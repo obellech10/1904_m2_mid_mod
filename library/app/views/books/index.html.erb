@@ -1,0 +1,12 @@
+<h1>Books Catalog</h1>
+
+<% @books.each do |book| %>
+  <section id="book-<%=book.id%>">
+    <p><%= book.title %></p>
+    <p><%= book.pages %></p>
+    <p><%= book.year %></p>
+    <% book.authors.each do |author| %>
+      <p><%= author.name %></p>
+    <% end %>
+  </section>
+<% end %>
